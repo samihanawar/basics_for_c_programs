@@ -1,23 +1,28 @@
-#include <stdio.h>
-#include <stdbool.h>
-int main()
-    {
-    int limit,i;
-    printf("Enter value of limit:\n");
-    scanf("%d",&limit);
-    printf("Prime Number between 1 to %d are: ",limit);
-    for(i=1;i<=limit; i++){
-    bool isPrime = true;
-    for(int j=2; j<i; j++){
-      if(i%j == 0){
-        isPrime = false;
-        break;
-      }
+#include<stdio.h>
+main() {
+    int i,flag,number;
+    flag=0;
+    printf("Enter the number:");
+    scanf("%d",&number);
+    for(i=2; i<number; i++)
+    {   if (number%i==0)
+
+        {
+            flag=1;
+        };
     }
-    if(isPrime)
-      printf("\n%d\n",i);
-  }
-  return 0;
+
+
+    if (flag==0)
+    {
+        printf("\nThe number %d is prime\n", number);
+    }
+    else {
+        printf("\nThe number %d is not prime\n", number);
+    }
+
+
+
 }
 
 
